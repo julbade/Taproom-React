@@ -9,11 +9,25 @@ function Header() {
       <div>
         <style jsx>{`
           font-family: Helvetica;
+          
 
+          .homeLinks {
+            text-align: right;
+
+            margin-right: 20px;
+          }
+          p {
+            float: right;
+            padding: 20px;
+          }
         `}</style>
           <h2>Tap Room</h2>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+            <div className="homeLinks">
+              <p><Link to="/">Home</Link></p>
+              <p><Link to="/beers">Beers</Link></p>
+              <p><Link to="/about">About</Link></p>
+
+          </div>
 
       </div>
     );
