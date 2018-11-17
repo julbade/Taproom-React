@@ -8,23 +8,29 @@ function Header() {
   return (
     <div>
       <style jsx>{`
-          font-family: Helvetica;
+        @import url('https://fonts.googleapis.com/css?family=Diplomata SC');
+          font-family: serif;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          background-color: #663300;
-          opacity: 0.7;
+          background-color: black;
           color: white;
+          position: sticky;
+          top: 0;
+          z-index: 1;
+          opacity: 0.8;
+
           p {
             margin-top: 18px;
             margin-right: 100px;
             color: white;
-
+            font-size: 20px;
           }
 
           h2 {
             margin-left: 50px;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-family: 'Diplomata SC';
           }
 
 
