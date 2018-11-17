@@ -24,7 +24,7 @@ function Header() {
             margin-top: 18px;
             margin-right: 100px;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
           }
 
           h2 {

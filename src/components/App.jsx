@@ -7,6 +7,8 @@ import Beers from './Beers';
 import About from './About';
 
 
+
+
 function App(){
 
   return (
@@ -20,8 +22,8 @@ function App(){
         <Route exact path='/' component={Home} />
         <Route exact path='/beers' component={Beers} />
         <Route exact path='/about' component={About} />
-
       </Switch>
+
 
     </div>
   );

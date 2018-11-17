@@ -11,20 +11,23 @@ function Home() {
           font-family: Helvetica;
           img {
             width: 100%;
-            height: 800px;
+            height: 700px;
           }
           .welcomePage {
             position: absolute;
             top: 200px;
-            left: 400px;
+            left: 420px;
             color: white;
             text-align: center;
             border: 5px solid white;
             padding: 100px;
             marging: 100px;
             border-radius: 20px;
-            opacity: 0.5;
+            opacity: 0.6;
             background-color: black;
+            box-sizing: content-box;
+            width: 400px;
+            height: 300px;
           }
           h1 {
             margin-bottom: 50px;
@@ -34,15 +37,16 @@ function Home() {
           }
           p {
             font-size: 30px;
+            font-family: 'Bubbler One';
 
           }
         `}</style>
 
-      <img className="mySlides" src={homePicture}/>
-        <div className="welcomePage">
-          <h1>Welcome to Tap Room</h1>
-            <p>The best among the rest</p>
-        </div>
+      <img src={homePicture}/>
+      <div className="welcomePage">
+        <h1>Welcome to Tap Room</h1>
+        <p>The best among the rest</p>
+      </div>
     </div>
   );
 }
