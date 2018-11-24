@@ -1,8 +1,10 @@
 import React from 'react';
 import homePicture from '../assets/image/Taproom.jpeg';
-import PropTypes from 'prop-types';
+import Kegs from './Kegs';
 
-function Beers(props) {
+
+
+function Beers() {
 
   return (
     <div>
@@ -29,6 +31,7 @@ function Beers(props) {
             box-sizing: content-box;
             width: 400px;
             height: 300px;
+            overflow: scroll;
           }
           h1 {
             margin-bottom: 40px;
@@ -37,7 +40,7 @@ function Beers(props) {
             font-family: 'Bubbler One';
           }
           p {
-            font-size: 30px;
+            font-size: 10px;
             font-family: 'Bubbler One';
 
           }
@@ -45,20 +48,13 @@ function Beers(props) {
       <img src={homePicture}/>
       <div className="welcomePage">
         <h1>Our Beers</h1>
-          
+        <Kegs />
       </div>
 
     </div>
 
   );
 }
-Beers.propTypes = {
-  name: PropTypes.string,
-  brewer: PropTypes.string,
-  description:PropTypes.string,
-  abv: PropTypes.number,
-  price: PropTypes.number,
-  remaining: PropTypes.number,
-};
+
 
 export default Beers;

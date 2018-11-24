@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
@@ -5,8 +7,7 @@ import Home from './Home';
 import bootstrap from '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Beers from './Beers';
 import About from './About';
-
-
+import Kegs from './Kegs';
 
 
 function App(){
@@ -20,16 +21,17 @@ function App(){
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/beers' component={Beers} />
-        <Route exact path='/about' component={About} />
+        <Route path='/beers' component={Beers} />
+        <Route path='/about' component={About} />
       </Switch>
+      <Kegs/>
+      <Kegs/>
 
 
     </div>
   );
 }
 
-//App.propTypes = {
-//};
+
 
 export default App;

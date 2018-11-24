@@ -17,7 +17,7 @@ function Header() {
           color: white;
           position: sticky;
           top: 0;
-          z-index: 1;
+          z-index: 9999;
           opacity: 0.8;
 
           p {
