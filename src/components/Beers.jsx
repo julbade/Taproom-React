@@ -39,6 +39,7 @@ function Beers() {
             font-family: 'Bubbler One';
             text-align: center;
           }
+          
         `}</style>
       <img src={homePicture}/>
       <div className="welcomePage">

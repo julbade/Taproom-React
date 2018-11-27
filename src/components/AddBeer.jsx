@@ -4,7 +4,7 @@ import homePicture from '../assets/image/Taproom.jpeg';
 
 
 
-function Beers() {
+function AddBeer() {
 
   return (
     <div>
@@ -39,12 +39,52 @@ function Beers() {
             font-family: 'Bubbler One';
             text-align: center;
           }
+         input {
+           
+           display: flex;
+         }
         `}</style>
       <img src={homePicture}/>
       <div className="welcomePage">
         <h1>Add Beers</h1>
         <br/>
-        
+        <form>
+        <label>Name:</label><input
+          type='text'
+          placeholder='Name' />
+        <br />
+        <br />
+        <label>Brewer:</label>
+        <input
+          placeholder='Brewer' />
+        <br />
+        <br />
+        <label>Description:</label>
+        <input
+          type='text'
+          placeholder='Description' />
+        <br />
+        <br />
+        <label>ABV:</label>
+        <input
+          type='text'
+          placeholder='ABV' />
+         <br />
+         <br />
+        <label>Price:</label>
+        <input
+          type='text'
+          placeholder='Price' />
+        <br />
+        <br />
+        <label>Remaining:</label>
+        <input
+          type='text'
+          placeholder='Remaining' />
+        <br />
+        <br />
+        <button className="btn btn-success" type='submit'>ADD!</button>
+      </form>
       </div>
     </div>
 
@@ -52,4 +92,4 @@ function Beers() {
 }
 
 
-export default Beers;
+export default AddBeer;

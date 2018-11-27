@@ -38,7 +38,7 @@ function Home() {
             font-family: 'Bubbler One';
           }
           p {
-            font-size: 30px;
+            font-size: 33px;
             font-family: 'Bubbler One';
 
           }
@@ -48,6 +48,7 @@ function Home() {
       <div className="welcomePage">
         <h1>Welcome to Tap Room</h1>
         <p>The best among the rest</p>
+        <p>Happy Hour: 9pm - 2am</p>
        
       </div>
     </div>
