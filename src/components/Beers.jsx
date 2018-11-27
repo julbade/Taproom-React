@@ -21,7 +21,6 @@ function Beers() {
             top: 200px;
             left: 420px;
             color: white;
-            text-align: center;
             border: 5px solid white;
             padding: 100px;
             marging: 100px;
@@ -29,7 +28,7 @@ function Beers() {
             opacity: 0.6;
             background-color: black;
             box-sizing: content-box;
-            width: 400px;
+            width: 420px;
             height: 300px;
             overflow: scroll;
           }
@@ -38,16 +37,13 @@ function Beers() {
             font-size: 50px;
             font-weight: bold;
             font-family: 'Bubbler One';
-          }
-          p {
-            font-size: 10px;
-            font-family: 'Bubbler One';
-
+            text-align: center;
           }
         `}</style>
       <img src={homePicture}/>
       <div className="welcomePage">
-        <h1>Our Beers</h1>
+        <h1>Our Best Beers</h1>
+        <br/>
          <KegList />
       </div>
     </div>

@@ -28,7 +28,7 @@ function Home() {
             opacity: 0.6;
             background-color: black;
             box-sizing: content-box;
-            width: 400px;
+            width: 420px;
             height: 300px;
           }
           h1 {
