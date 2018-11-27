@@ -6,7 +6,7 @@ import Header from './Header';
 import Home from './Home';
 import bootstrap from '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Beers from './Beers';
-import About from './About';
+import Add from './Add';
 import Kegs from './Kegs';
 
 
@@ -22,12 +22,9 @@ function App(){
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/beers' component={Beers} />
-        <Route path='/about' component={About} />
+        <Route path='/add' component={Add} />
       </Switch>
-      <Kegs/>
-      <Kegs/>
-
-
+  
     </div>
   );
 }

@@ -27,26 +27,6 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        enforce: "pre",
-        loader: "eslint-loader",
-        exclude: /node_modules/,
-        options: {
-          emitWarning: true,
-          configFile: "./.eslintrc.json"
-          }
-      },
-      {
-     test: /\.(png|gif|jp(e*)g|svg)$/,
-     use: {
-       loader: 'url-loader',
-       options: {
-         limit: 8000,
-         name: 'images/[hash]-[name].[ext]'
-       }
-     }
-   },
-      {
-        test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
@@ -61,8 +41,12 @@ module.exports = {
         }
       },
       {
+        test: /\.(png|jpg|jpeg)$/,
+        loader: 'url-loader?limit=8192'
+      },
+      {
         test: /\.css$/,
-        loader: ["style-loader", "css-loader"]
+        loader: ['style-loader', 'css-loader']
       }
     ],
   },

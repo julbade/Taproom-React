@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function About() {
+function Add() {
 
   return (
     <div>
@@ -9,10 +9,10 @@ function About() {
           font-family: Helvetica;
 
         `}</style>
-        About here
+        Add here
 
     </div>
   );
 }
 
-export default About;
+export default Add;

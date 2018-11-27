@@ -1,6 +1,8 @@
 import React from 'react';
 import homePicture from '../assets/image/Taproom.jpeg';
 
+
+
 function Home() {
 
   return (
@@ -46,6 +48,7 @@ function Home() {
       <div className="welcomePage">
         <h1>Welcome to Tap Room</h1>
         <p>The best among the rest</p>
+       
       </div>
     </div>
   );

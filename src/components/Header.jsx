@@ -38,7 +38,7 @@ function Header() {
       <h2>Tap Room</h2>
       <p><Link style={{ color: 'white' }} to="/">Home</Link></p>
       <p><Link style={{ color: 'white' }} to="/beers">Beers</Link></p>
-      <p><Link style={{ color: 'white' }} to="/about">About</Link></p>
+      <p><Link style={{ color: 'white' }} to="/add">Add Beer</Link></p>
 
 
     </div>

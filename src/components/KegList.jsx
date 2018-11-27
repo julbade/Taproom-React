@@ -4,11 +4,11 @@ import Kegs from './Kegs';
 const masterKegList = [
   {
     name: "Ruby Zozzle",
-    brewer: 'Hi-Wheel',
-    description: 'Sparkling Wine & Grapefruit',
-    abv: '6.8%',
-    price: '7',
-    remaining: '20'
+    brewer: "Hi-Wheel",
+    description: "Sparkling Wine & Grapefruit",
+    abv: "6.8%",
+    price: "7",
+    remaining: "20"
   },
   {
     name: 'Tart N Juicy',
@@ -52,7 +52,7 @@ const masterKegList = [
   }
 ];
 
-function KegList() {
+ function KegList() {
   return (
     <div>
       {masterKegList.map((kegs, index) =>
@@ -62,8 +62,8 @@ function KegList() {
           abv={kegs.abv}
           price={kegs.price}
           remaining={kegs.remaining}
-          key={index} />
-      )}
+          key={index}/>
+      )} 
     </div>
   );
 }

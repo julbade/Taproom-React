@@ -1,6 +1,6 @@
 import React from 'react';
 import homePicture from '../assets/image/Taproom.jpeg';
-import Kegs from './Kegs';
+import KegList from './KegList';
 
 
 
@@ -48,9 +48,8 @@ function Beers() {
       <img src={homePicture}/>
       <div className="welcomePage">
         <h1>Our Beers</h1>
-        <Kegs />
+         <KegList />
       </div>
-
     </div>
 
   );
