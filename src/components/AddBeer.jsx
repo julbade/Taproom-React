@@ -1,10 +1,9 @@
 import React from 'react';
 import homePicture from '../assets/image/Taproom.jpeg';
+import PropTypes from 'prop-types';
 
 
-
-
-function AddBeer() {
+function AddBeer(props) {
 
   let _name = null;
   let _brewer = null;
@@ -15,6 +14,7 @@ function AddBeer() {
 
   function handleNewBeerFormSubmission(event) {
     event.preventDefault();
+    props.onNewBeerCreation({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: _remaining.value});
     _name.value = '';
     _brewer.value = '';
     _description.value = '';
@@ -66,59 +66,61 @@ function AddBeer() {
         <h1>Add Beers</h1>
         <br/>
         <form onSubmit={handleNewBeerFormSubmission}>
-        <label>Name:</label><input
-          id='name'
-          type='text'
-          placeholder='Name'
-          ref={(input) => {_name = input;}} />
-        <br />
-        <br />
-        <label>Brewer:</label>
-        <input
-          id='brewer'
-          placeholder='Brewer'
-          ref={(input) => {_brewer = input;}} />
-        <br />
-        <br />
-        <label>Description:</label>
-        <input
-          id='description'
-          type='text'
-          placeholder='Description'
-          ref={(input) => {_description = input;}} />
-        <br />
-        <br />
-        <label>ABV:</label>
-        <input
-          id='abv'
-          type='text'
-          placeholder='ABV'
-          ref={(input) => {_abv = input;}} />
-         <br />
-         <br />
-        <label>Price:</label>
-        <input
-          id='price'
-          type='text'
-          placeholder='Price'
-          ref={(input) => {_price = input;}} />
-        <br />
-        <br />
-        <label>Remaining:</label>
-        <input
-          id='remaining'
-          type='text'
-          placeholder='Remaining'
-          ref={(input) => {_remaining = input;}} />
-        <br />
-        <br />
-        <button className="btn btn-success" type='submit'>ADD!</button>
-      </form>
+          <label>Name:</label><input
+            id='name'
+            type='text'
+            placeholder='Name'
+            ref={(input) => {_name = input;}} />
+          <br />
+          <br />
+          <label>Brewer:</label>
+          <input
+            id='brewer'
+            placeholder='Brewer'
+            ref={(input) => {_brewer = input;}} />
+          <br />
+          <br />
+          <label>Description:</label>
+          <input
+            id='description'
+            type='text'
+            placeholder='Description'
+            ref={(input) => {_description = input;}} />
+          <br />
+          <br />
+          <label>ABV:</label>
+          <input
+            id='abv'
+            type='text'
+            placeholder='ABV'
+            ref={(input) => {_abv = input;}} />
+          <br />
+          <br />
+          <label>Price:</label>
+          <input
+            id='price'
+            type='text'
+            placeholder='Price'
+            ref={(input) => {_price = input;}} />
+          <br />
+          <br />
+          <label>Remaining:</label>
+          <input
+            id='remaining'
+            type='text'
+            placeholder='Remaining'
+            ref={(input) => {_remaining = input;}} />
+          <br />
+          <br />
+          <button className="btn btn-success" type='submit'>ADD!</button>
+        </form>
       </div>
     </div>
 
   );
 }
-
+AddBeer.propTypes = {
+  onNewBeerCreation: PropTypes.func,
+};
 
 export default AddBeer;

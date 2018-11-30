@@ -3,26 +3,28 @@ import homePicture from '../assets/image/Taproom.jpeg';
 import KegList from './KegList';
 
 class Beers extends React.Component {
-
   constructor(props) {
     super(props);
-    this.setState = {
-      masterKegList: []
+    this.state = {
+      kegListVisible: false
+
     };
-    this.handleAddNewBeer = this.handleAddNewBeer.bind(this);
+    this.handleAddBeerConfirmation = this.handleAddBeerConfirmation.bind(this);
   }
 
-  handleAddNewBeer(newBeer){
-    var newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.push(newBer);
-    this.setState({masterKegList: newMasterKegList});
+  handleAddBeerConfirmation() {
+    this.setState({kegListVisible: true});
   }
 
-render() {
+  render() {
+    let currentContent = null;
+    if(this.state.kegListVisible) {
+      currentContent = <KegList keglist={this.state.masterKegList}/>; 
+    } 
 
-  return (
-    <div>
-      <style jsx>{`
+    return (
+      <div>
+        <style jsx>{`
 
           @import url('https://fonts.googleapis.com/css?family=Bubbler One');
 
@@ -55,17 +57,19 @@ render() {
           }
           
         `}</style>
-      <img src={homePicture}/>
-      <div className="welcomePage">
-        <h1>Our Best Beers</h1>
-        <br/>
-         <KegList />
+        <img src={homePicture}/>
+        <div className="welcomePage">
+          <h1>Our Best Beers</h1>
+          <br/>
+          {currentContent}
+        </div>
       </div>
-    </div>
 
     );
   }
-} 
+}
+
+
 
 
 export default Beers;

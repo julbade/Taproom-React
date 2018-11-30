@@ -16,13 +16,14 @@ function Kegs(props){
       
       
       `}</style>
+      
       <ul>
-      <li><h2>{props.name}</h2></li>
-      <p>Brewer: {props.brewer}</p>
-      <p>Description: {props.description}</p>
-      <p>ABV: {props.abv}</p>
-      <p>Price: {props.price}$</p>
-      <p>Pints: {props.remaining}</p>
+        <li><h2>{props.name}</h2></li>
+        <p>Brewer: {props.brewer}</p>
+        <p>Description: {props.description}</p>
+        <p>ABV: {props.abv}</p>
+        <p>Price: {props.price}$</p>
+        <p>Pints: {props.remaining}</p>
       </ul>
     </div>
   );
