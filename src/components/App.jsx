@@ -12,8 +12,17 @@ import AddBeer from './AddBeer';
 class App extends React.Component{
   constructor(props) {
     super(props);
-    this.setState = {
-      masterKegList: []
+    this.state = {
+      masterKegList: [
+        {
+          name: "Ruby Zozzle",
+          brewer: "Hi-Wheel",
+          description: "Sparkling Wine & Grapefruit",
+          abv: "6.8%",
+          price: "7",
+          remaining: "20"
+        }
+      ]
     };
     this.handleAddNewBeer = this.handleAddNewBeer.bind(this);
   }
@@ -22,6 +31,7 @@ class App extends React.Component{
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newBeer);
     this.setState({masterKegList: newMasterKegList});
+    console.log(this.state.masterKegList)
   }
     
   render(){
