@@ -23,7 +23,7 @@ function App(){
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/beers' component={Beers} />
-        <Route path='/add' component={AddBeer} />
+        <Route path='/add' render= {() => <AddBeer onNewBeer={this.handleAddNewBeer}/>} />
         <Route component={Error404} />
       </Switch>
   

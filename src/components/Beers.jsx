@@ -2,9 +2,23 @@ import React from 'react';
 import homePicture from '../assets/image/Taproom.jpeg';
 import KegList from './KegList';
 
+class Beers extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.setState = {
+      masterKegList: []
+    };
+    this.handleAddNewBeer = this.handleAddNewBeer.bind(this);
+  }
 
-function Beers() {
+  handleAddNewBeer(newBeer){
+    var newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newBer);
+    this.setState({masterKegList: newMasterKegList});
+  }
+
+render() {
 
   return (
     <div>
@@ -49,8 +63,9 @@ function Beers() {
       </div>
     </div>
 
-  );
-}
+    );
+  }
+} 
 
 
 export default Beers;
