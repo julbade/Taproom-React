@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function KegList(props) {
   return (
     <div>
-      {props.kegList.map((kegs, index) =>
+      {props.keglist.map((kegs, index) =>
         <Kegs name={kegs.name}
           brewer={kegs.brewer}
           description={kegs.description}
