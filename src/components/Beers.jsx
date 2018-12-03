@@ -10,7 +10,6 @@ class Beers extends React.Component {
     this.state = {
       kegListVisible: false
     };
-    this.handleAddBeerConfirmation = this.handleAddBeerConfirmation.bind(this);
   }
 
   //Dont need this
