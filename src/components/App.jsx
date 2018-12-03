@@ -13,16 +13,7 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: [
-        {
-          name: "Ruby Zozzle",
-          brewer: "Hi-Wheel",
-          description: "Sparkling Wine & Grapefruit",
-          abv: "6.8%",
-          price: "7",
-          remaining: "20"
-        }
-      ]
+      masterKegList: []
     };
     this.handleAddNewBeer = this.handleAddNewBeer.bind(this);
   }
@@ -45,7 +36,7 @@ class App extends React.Component{
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/beers' component={Beers}/>
+          <Route path='/beers' render={() => <Beers keglist = {this.state.masterKegList}/>}/>
           <Route path='/add' render= {() => <AddBeer onNewBeerCreation={this.handleAddNewBeer}/>} />
           <Route component={Error404} />
         </Switch>

@@ -1,26 +1,28 @@
 import React from 'react';
 import homePicture from '../assets/image/Taproom.jpeg';
 import KegList from './KegList';
+import PropTypes from 'prop-types';
+
 
 class Beers extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       kegListVisible: false
-
     };
     this.handleAddBeerConfirmation = this.handleAddBeerConfirmation.bind(this);
   }
 
-  handleAddBeerConfirmation() {
-    this.setState({kegListVisible: true});
-  }
+  //Dont need this
+  // handleAddBeerConfirmation() {
+  //   console.log('I am in handleAddBeer');
+  //   this.setState({kegListVisible: true});
+  // }
 
   render() {
     let currentContent = null;
-    if(this.state.kegListVisible) {
-      currentContent = <KegList keglist={this.state.masterKegList}/>; 
-    } 
+    console.log(this.state.kegListVisible)
+      currentContent = <KegList keglist={this.props.keglist}/>; 
 
     return (
       <div>
@@ -70,6 +72,8 @@ class Beers extends React.Component {
 }
 
 
-
+Beers.propTypes = {
+  keglist: PropTypes.array
+};
 
 export default Beers;
