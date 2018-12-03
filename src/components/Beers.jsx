@@ -12,11 +12,7 @@ class Beers extends React.Component {
     };
   }
 
-  //Dont need this
-  // handleAddBeerConfirmation() {
-  //   console.log('I am in handleAddBeer');
-  //   this.setState({kegListVisible: true});
-  // }
+
 
   render() {
     let currentContent = null;
